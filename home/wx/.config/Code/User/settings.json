@@ -1,0 +1,13 @@
+{
+  "editor.tabSize": "2",
+  "files.eol": "\n",
+  "javascript.implicitProjectConfig.checkJs": true,
+  "[javascript]": {},
+  "editor.minimap.enabled": true,
+  "breadcrumbs.enabled": true,
+  "window.menuBarVisibility": "default",
+  "workbench.activityBar.visible": true,
+  "csharp.referencesCodeLens.enabled": false,
+  "editor.renderWhitespace": "none",
+  "editor.renderControlCharacters": true
+}

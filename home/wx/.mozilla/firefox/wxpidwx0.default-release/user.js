@@ -1,0 +1,38 @@
+// this file contains the default values that are merged with ./prefs.js
+
+user_pref("accessibility.force_disabled", 1);
+user_pref("accessibility.typeaheadfind.flashBar", 0);
+user_pref("browser.bookmarks.defaultLocation", "unfiled");
+user_pref("browser.bookmarks.restore_default_bookmarks", false);
+user_pref("browser.contentblocking.category", "standard");
+user_pref("browser.ctrlTab.recentlyUsedOrder", false);
+user_pref("browser.download.useDownloadDir", false);
+user_pref("browser.newtabpage.activity-stream.feeds.section.highlights", false);
+user_pref("browser.newtabpage.activity-stream.feeds.section.topstories", false);
+user_pref("browser.newtabpage.activity-stream.feeds.snippets", false);
+user_pref("browser.newtabpage.activity-stream.feeds.topsites", false);
+user_pref("browser.newtabpage.activity-stream.showSearch", false);
+user_pref("browser.newtabpage.enabled", false);
+user_pref("browser.newtabpage.pinned", "[]");
+user_pref("browser.rights.3.shown", true);
+user_pref("browser.search.hiddenOneOffs", "Google,Amazon.com,Bing,DuckDuckGo,Wikipedia (en),Amazon.co.uk,eBay");
+user_pref("browser.search.region", "GB");
+user_pref("browser.search.suggest.enabled", false);
+user_pref("browser.search.widget.inNavBar", true);
+user_pref("browser.sessionstore.warnOnQuit", true);
+user_pref("browser.startup.homepage", "about:blank");
+user_pref("browser.startup.page", 3);
+user_pref("browser.tabs.drawInTitlebar", true);
+user_pref("browser.uiCustomization.state", "{\"placements\":{\"widget-overflow-fixed-list\":[],\"nav-bar\":[\"back-button\",\"forward-button\",\"stop-reload-button\",\"home-button\",\"customizableui-special-spring1\",\"urlbar-container\",\"search-container\",\"customizableui-special-spring2\",\"downloads-button\",\"library-button\",\"sidebar-button\",\"fxa-toolbar-menu-button\"],\"toolbar-menubar\":[\"menubar-items\"],\"TabsToolbar\":[\"tabbrowser-tabs\",\"new-tab-button\",\"alltabs-button\"],\"PersonalToolbar\":[\"personal-bookmarks\"]},\"seen\":[\"developer-button\"],\"dirtyAreaCache\":[\"nav-bar\",\"toolbar-menubar\",\"TabsToolbar\",\"PersonalToolbar\"],\"currentVersion\":16,\"newElementCount\":3}");
+user_pref("browser.uidensity", 1);
+user_pref("browser.urlbar.placeholderName", "Wikipedia (en)");
+user_pref("browser.urlbar.placeholderName.private", "Wikipedia (en)");
+user_pref("browser.urlbar.suggest.topsites", false);
+user_pref("extensions.activeThemeID", "firefox-compact-dark@mozilla.org");
+user_pref("extensions.ui.dictionary.hidden", true);
+user_pref("extensions.ui.lastCategory", "addons://list/theme");
+user_pref("extensions.ui.locale.hidden", false);
+user_pref("extensions.ui.plugin.hidden", false);
+user_pref("privacy.donottrackheader.enabled", true);
+user_pref("toolkit.telemetry.reportingpolicy.firstRun", false);
+user_pref("trailhead.firstrun.didSeeAboutWelcome", true);

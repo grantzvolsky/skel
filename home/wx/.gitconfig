@@ -1,0 +1,49 @@
+# references
+#  - https://git.wiki.kernel.org/index.php/Aliases
+#  - https://github.com/vitek-rostislav
+[user]
+  name = Grant Zvolsky
+  email = grant@zvolsky.org
+[core]
+  editor = vi
+  #excludesfile = /home/wx/.gitignore_global
+[alias]
+  ap = add -p
+  br = branch
+  # rmb = !sh -c 'git push origin :$1' -
+  brt = for-each-ref --format=\"%(refname:short) > %(upstream:short)\" refs/heads
+  df = diff
+  # If an alias is prefixed with an exclamation mark it will be treated as a shell command
+  exec = !'exec'
+  # updates your branch with upstream (if fast-forward is possible)
+  ff = !git merge --ff-only `git rev-parse --symbolic-full-name --abbrev-ref=strict HEAD@{u}`
+  # fp = fetch --prune
+  l = log --graph --decorate --pretty=oneline --abbrev-commit -20
+  ll = log --graph --decorate --pretty=oneline --abbrev-commit --all
+  ld = log -p -m # log for current branch showing diffs (-m is for showing mergecommits too)
+  ls = log --stat -m # log for current branch showing summary of changed files (-m is for showing mergecommits too)
+  pwd = !echo `pwd` / $GIT_PREFIX
+  rb = rebase
+  rbi = rebase -i
+  rbc = rebase --continue
+  rh = reset --hard
+  st = status
+  su = submodule update
+  stats = shortlog -n -s --no-merges # number of commits for each person
+  brtracked = rev-parse --symbolic-full-name --abbrev-ref=strict HEAD@{u} # get upstream tracked branch or error
+  #wip = !git add $(git rev-parse --show-toplevel) && git commit -m WIP # commit all changes to a WIP commit
+[color]
+  ui = auto
+[color "branch"]
+  current = yellow reverse
+  local = yellow
+  remote = green
+[color "diff"]
+  meta = yellow bold
+  frag = magenta bold
+  old = red bold
+  new = green bold
+[color "status"]
+#  added = green
+#  changed = yellow
+#  untracked = cyan

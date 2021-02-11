@@ -3,7 +3,7 @@ https://gist.github.com/lheckemann/402e61e8e53f136f239ecd8c17ab1deb
 Save this file to ~/default.nix or your preferred path (make sure to
 change the location in the update-profile script if you choose a
 different place).
-Install using `nix-env -f ~/.nix-buildenvs/gzvolsky --set`, from then on use `update-profile`.
+Install using `nix-env -f ~ --set`, from then on use `update-profile`.
 */
 
 { pkgs ? import <nixpkgs> {}
@@ -16,7 +16,7 @@ in buildEnv {
   inherit name;
   extraOutputsToInstall = ["out" "bin" "lib"];
   paths = [
-    docker_19_03
+    #docker_19_03
     #dotnet-sdk_3
     fzf
     git

@@ -36,3 +36,4 @@ user_pref("extensions.ui.plugin.hidden", false);
 user_pref("privacy.donottrackheader.enabled", true);
 user_pref("toolkit.telemetry.reportingpolicy.firstRun", false);
 user_pref("trailhead.firstrun.didSeeAboutWelcome", true);
+user_pref("signon.rememberSignons", false);

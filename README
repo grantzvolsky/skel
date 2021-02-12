@@ -1,1 +1,20 @@
 This skel directory is managed by [skel manager](https://github.com/grantzvolsky/skel-manager).
+
+Below is one of many ways in which one could apply the xubuntu-2004 skel to a fresh Xubuntu 20.04 installation.
+```
+$ apt install -y curl
+$ curl -L https://nixos.org/nix/install | sh
+$ nix-shell -p git
+$ git clone git://github.com/grantzvolsky/skel
+$ export SKEL_MANAGER_DIR=$(realpath ./skel)
+$ ln -sfn $(realpath ./skel/skels/xubuntu-2004) ./skel/skels/current
+$ git clone git://github.com/grantzvolsky/skel-manager
+$ cd ./skel-manager
+$ ./skel-manager.sh di # review changes
+$ sudo -E ./skel-manager.sh i /etc
+$ ./skel-manager.sh i /
+$ nix-env -f ~ --set
+$ reboot -p
+```
+
+If you encounter any issues please submit a repro at https://github.com/grantzvolsky/skel-manager/issues.

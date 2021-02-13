@@ -24,6 +24,7 @@ in buildEnv {
     #kubectl
     nix # If not on NixOS, this is important!
     #nodejs
+    #pass TODO figure out why nix pass doesn't come with bash completion & the standard tree command
     ripgrep
     shellcheck
     tmux

@@ -37,7 +37,7 @@
 ; (gtk_accel_path "<Actions>/terminal-window/set-title" "<Primary><Shift>s")
 (gtk_accel_path "<Actions>/terminal-window/contents" "")
 ; (gtk_accel_path "<Actions>/terminal-window/zoom-reset" "<Primary>0")
-; (gtk_accel_path "<Actions>/terminal-window/close-tab" "<Primary><Shift>w")
+(gtk_accel_path "<Actions>/terminal-window/close-tab" "")
 ; (gtk_accel_path "<Actions>/terminal-window/new-tab" "<Primary><Shift>t")
 ; (gtk_accel_path "<Actions>/terminal-window/new-window" "<Primary><Shift>n")
 ; (gtk_accel_path "<Actions>/terminal-window/terminal-menu" "")

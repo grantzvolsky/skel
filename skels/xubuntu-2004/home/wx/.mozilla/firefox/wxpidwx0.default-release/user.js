@@ -37,3 +37,4 @@ user_pref("privacy.donottrackheader.enabled", true);
 user_pref("toolkit.telemetry.reportingpolicy.firstRun", false);
 user_pref("trailhead.firstrun.didSeeAboutWelcome", true);
 user_pref("signon.rememberSignons", false);
+user_pref("browser.urlbar.trimURLs", false);

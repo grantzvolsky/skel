@@ -39,4 +39,6 @@ TextBlinkMode=TERMINAL_TEXT_BLINK_MODE_NEVER
 ScrollingBar=TERMINAL_SCROLLBAR_NONE
 ScrollingLines=10000
 ShortcutsNoHelpkey=TRUE
-ColorSelectionUseDefault=TRUE
+ShortcutsNoMenukey=TRUE
+ShortcutsNoMnemonics=TRUE
+

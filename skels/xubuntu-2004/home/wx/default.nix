@@ -20,6 +20,7 @@ in buildEnv {
     #dotnet-sdk_3
     fzf
     git
+    jq
     #go
     #kubectl
     nix # If not on NixOS, this is important!

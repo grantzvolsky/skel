@@ -11,11 +11,22 @@ Install using `nix-env -f ~ --set`, from then on use `update-profile`.
 }: with pkgs;
 
 let
+  vim-ep = callPackage ~/.nixpkgs/vim/neovim/neovim-python-coc.nix { name = "ep"; };
+  vim-aliases = [ vim-ep ];
+
+  #vim8-python = callPackage ~/.nixpkgs/vim/vim8/vim8-python.nix { name = "vim8-python"; };
+  #vim8s = [ vim8-python ];
+
+  neovim-plain = callPackage ~/.nixpkgs/vim/neovim/neovim-plain.nix { name = "neovim-plain"; };
+  neovim-python-ale = callPackage ~/.nixpkgs/vim/neovim/neovim-python-ale.nix { name = "neovim-python-ale"; };
+  neovim-python-coc = callPackage ~/.nixpkgs/vim/neovim/neovim-python-coc.nix { name = "neovim-python-coc"; };
+  neovim-python-lcn = callPackage ~/.nixpkgs/vim/neovim/neovim-python-lcn.nix { name = "neovim-python-lcn"; };
+  neovims = [ neovim-plain neovim-python-ale neovim-python-coc neovim-python-lcn ];
 #  cue = callPackage ~/.nixpkgs/my-cue.nix {};
 in buildEnv {
   inherit name;
   extraOutputsToInstall = ["out" "bin" "lib"];
-  paths = [
+  paths = vim-aliases ++ neovims ++ [
     #docker_19_03
     #dotnet-sdk_3
     fzf
@@ -29,9 +40,8 @@ in buildEnv {
     ripgrep
     shellcheck
     tmux
+    vim-ep
     vscode
-
-    #myNeovim
 
     (writeScriptBin "update-profile" ''
       #!${stdenv.shell}

@@ -10,19 +10,13 @@ let
   common_vim_preferences = builtins.readFile ../common.vimrc;
   neovim_preferences = builtins.readFile ./neovim.vimrc;
 
-  my_pyls = (python3.withPackages(ps: [
-    ps.python-language-server
-
-    #ps.pyls-mypy # type checking
-    ps.pyls-isort # import sorting
-    ps.pyls-black # code formatting
-
-    ps.numpy
-    ps.pandas
-  ]));
+  #my_python = (python3.withPackages(ps: [
+  #  ps.numpy
+  #  ps.pandas
+  #]));
 
   ale_neovim_python_preferences = ''
-    let g:ale_linters = {'python': ['pyls']}
+    let g:ale_linters = {'python': ['pyright']}
     let g:ale_fixers = {'python': ['black']}
 
     let g:deoplete#enable_at_startup = 1
@@ -55,10 +49,12 @@ let
 in pkgs.symlinkJoin {
   name = name;
   paths = [ ];
-  buildInputs = [ neovim_python my_pyls ];
+  buildInputs = [ neovim_python newpkgs.python3.pkgs.black newpkgs.nodePackages.pyright ];
   postBuild = ''
     mkdir $out/bin
-    ln -s ${my_pyls}/bin/pyls $out/bin/pyls
+    ln -s ${newpkgs.python3.pkgs.black}/bin/black $out/bin/black
+    ln -s ${newpkgs.nodePackages.pyright}/bin/pyright $out/bin/pyright
+    ln -s ${newpkgs.nodePackages.pyright}/bin/pyright-langserver $out/bin/pyright-langserver
     ln -s ${neovim_python}/bin/nvim $out/bin/${name}
   '';
 }

@@ -1,5 +1,5 @@
 {
-  "editor.tabSize": "2",
+  "editor.tabSize": 2,
   "emmet.showExpandedAbbreviation": "never",
   "files.eol": "\n",
   "javascript.implicitProjectConfig.checkJs": true,
@@ -10,5 +10,14 @@
   "workbench.activityBar.visible": true,
   "csharp.referencesCodeLens.enabled": false,
   "editor.renderWhitespace": "none",
-  "editor.renderControlCharacters": true
+  "editor.renderControlCharacters": true,
+  "vscode-neovim.neovimExecutablePaths.linux": "/nix/store/gamkm6n3r0mhsrbxswwxq5a1apnyxvwk-neovim-0.4.4/bin/nvim",
+  "files.watcherExclude": {
+    "**/.bloop": true,
+    "**/.metals": true,
+    "**/.ammonite": true
+  },
+  "[csharp]": {
+    "editor.tabSize": 4
+  }
 }

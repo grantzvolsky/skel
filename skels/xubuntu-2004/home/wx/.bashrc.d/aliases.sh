@@ -5,7 +5,7 @@ alias c='clear &&'
 alias dirs='dirs -v' # use with cd ~#, pushd, & popd (https://unix.stackexchange.com/a/270437)
 
 __b() { # bookmarks
-  local selected="cd "$(cat ~/.bash_eternal_history | grep '^cd /' | egrep -v '\.\.|/tmp' | awk '{print $2}' | sort | uniq | fzf --exact)
+  local selected="cd "$(cat ~/.bash_eternal_history | grep --text '^cd /' | egrep -v '\.\.|/tmp' | awk '{print $2}' | sort | uniq | fzf --exact)
   READLINE_LINE="${READLINE_LINE:0:$READLINE_POINT}$selected${READLINE_LINE:$READLINE_POINT}"
   READLINE_POINT=$(( READLINE_POINT + ${#selected} ))
 }

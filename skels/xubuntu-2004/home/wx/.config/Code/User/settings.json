@@ -1,5 +1,6 @@
 {
   "editor.tabSize": 2,
+  "editor.links": false,
   "emmet.showExpandedAbbreviation": "never",
   "files.eol": "\n",
   "javascript.implicitProjectConfig.checkJs": true,
@@ -19,5 +20,5 @@
   },
   "[csharp]": {
     "editor.tabSize": 4
-  }
+  },
 }

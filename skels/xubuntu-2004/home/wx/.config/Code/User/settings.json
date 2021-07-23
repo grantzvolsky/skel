@@ -8,7 +8,12 @@
   "editor.minimap.enabled": true,
   "breadcrumbs.enabled": true,
   "window.menuBarVisibility": "default",
+  "window.title": "${rootPath}${separator}${activeEditorShort}${dirty}${separator} vscode",
   "workbench.activityBar.visible": true,
+  "workbench.colorCustomizations": {
+    "editor.background": "#000"
+  },
+  "workbench.editor.openPositioning": "right",
   "csharp.referencesCodeLens.enabled": false,
   "editor.renderWhitespace": "none",
   "editor.renderControlCharacters": true,
@@ -21,4 +26,6 @@
   "[csharp]": {
     "editor.tabSize": 4
   },
+  "omnisharp.useGlobalMono": "never",
+  "omnisharp.path": "latest",
 }

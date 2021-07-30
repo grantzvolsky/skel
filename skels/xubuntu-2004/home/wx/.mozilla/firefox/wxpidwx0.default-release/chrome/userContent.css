@@ -1,0 +1,12 @@
+/* Credits @cor-el, https://support.mozilla.org/en-US/questions/1288490 */
+@-moz-document domain(github.com) {
+    a { font-family: mono !important; }
+    [data-color-mode="dark"][data-dark-theme*="dark"] {
+      --color-bg-canvas: #000 !important;
+      --color-bg-canvas-inset: #000 !important;
+      --color-bg-primary: #000 !important;
+      --color-bg-secondary: #000 !important;
+      --color-bg-tertiary: #000 !important;
+      --color-bg-overlay: #000 !important;
+    }
+}

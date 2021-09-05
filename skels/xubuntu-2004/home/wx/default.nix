@@ -6,11 +6,11 @@ different place).
 Install using `nix-env -f ~ --set`, from then on use `update-profile`.
 */
 
-{ pkgs ? import <nixpkgs> {}
-, name ? "user-env"
-}: with pkgs;
+# Pinned to this version because it comes with neovim 0.5
+with import (builtins.fetchTarball "https://github.com/NixOS/nixpkgs/archive/d924c2327b5a0b083035c168549aa40685ed47a8.tar.gz") {};
 
 let
+  name = "user-env";
 #  cue = callPackage ~/.nixpkgs/my-cue.nix {};
 in buildEnv {
   inherit name;

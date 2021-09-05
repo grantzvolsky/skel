@@ -10,10 +10,14 @@ $ export SKEL_MANAGER_DIR=$(realpath ./skel)
 $ ln -sfn $(realpath ./skel/skels/xubuntu-2004) ./skel/skels/current
 $ git clone git://github.com/grantzvolsky/skel-manager
 $ cd ./skel-manager
+$ mv $(./skel-manager.sh pwd)/home/wx $(./skel-manager.sh pwd)/home/$USER
+$ ./skel-manager.sh git add -A
+$ ./skel-manager.sh git commit -m "rename user wx -> $USER"
 $ ./skel-manager.sh di # review changes
 $ sudo -E ./skel-manager.sh i /etc
 $ ./skel-manager.sh i /
-$ nix-env -f ~ --set
+$ ./skel-manager.sh di # make sure there are no unappiled changes
+$ nix-env -f ~ --set # apply ~/default.nix
 $ reboot -p
 ```
 

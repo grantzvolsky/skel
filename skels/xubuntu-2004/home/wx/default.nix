@@ -30,7 +30,6 @@ in buildEnv {
     ripgrep
     shellcheck
     tmux
-    vscode
 
     (writeScriptBin "update-profile" ''
       #!${stdenv.shell}

@@ -1,6 +1,6 @@
 #!/bin/bash
 
-# shell
+# terminal
 alias c='clear &&'
 alias dirs='dirs -v' # use with cd ~#, pushd, & popd (https://unix.stackexchange.com/a/270437)
 
@@ -11,6 +11,8 @@ __b() { # bookmarks
 }
 
 bind -m vi-insert -x '"\eb": "__b"' 2>/dev/null
+
+alias xx='wmctrl -ic $(xprop -root _NET_ACTIVE_WINDOW | cut -d" " -f5 | cut -d"," -f1)'
 
 # clipboard
 alias ci='xclip -i -selection clipboard'

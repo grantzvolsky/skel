@@ -1,6 +1,8 @@
 {
+  "debug.focusWindowOnBreak": false,
   "editor.tabSize": 2,
   "editor.links": false,
+  "editor.bracketPairColorization.enabled": false,
   "emmet.showExpandedAbbreviation": "never",
   "files.eol": "\n",
   "javascript.implicitProjectConfig.checkJs": true,
